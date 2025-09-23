@@ -1,93 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Interactive Recipe Finder</title>
   <link rel="stylesheet" href="style.css">
-  <meta name="description" content="Interactive Recipe Finder — search, filter and view recipes. Built with HTML, CSS & JavaScript." />
+  <meta name="description" content="Interactive Recipe Finder — search, filter and view recipes. Built with HTML, CSS & JavaScript.">
 </head>
 <body>
   <!-- Page wrapper -->
   <div id="app" class="app-root">
-      <!-- Navbar -->
-  <!-- <nav class="navbar">
-    <div class="container">
-      <div class="brand">Recipe Finder</div>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#recipes">Recipes</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="hamburger">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="brand">Recipe Finder</div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#recipes">Recipes</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
       </div>
-    </div>
-  </nav> -->
-     
+    </nav>
 
     <!-- Header / Hero -->
     <header class="site-header" role="banner">
       <div class="container">
         <h1 class="site-title">Interactive Recipe Finder</h1>
         <p class="site-subtitle">Search recipes, filter by cuisine or meal type, and open full instructions — fast.</p>
+        <!-- Search form -->
+        <form id="search-form" class="search-form" role="search" aria-label="Search recipes">
+          <label for="search-input" class="visually-hidden">Search recipes</label>
+          <input
+            id="search-input"
+            data-search-input
+            name="q"
+            type="search"
+            placeholder="Search by recipe name or ingredient (e.g. 'chicken, tomato')"
+            autocomplete="off"
+            aria-label="Search recipes"
+          />
+          <button type="submit" data-search-btn aria-label="Search">Search</button>
+          <button type="button" data-clear-btn aria-label="Clear" title="Clear search">Clear</button>
+        </form>
+        <!-- Controls: Search + Filters + Sort -->
+        <section class="controls container" aria-labelledby="controls-heading">
+          <h2 id="controls-heading" class="visually-hidden">Search and filter recipes</h2>
+
+          <!-- Filters -->
+          <div class="filters" role="region" aria-label="Recipe filters">
+            <fieldset>
+              <legend>Filter by Cuisine</legend>
+              <label><input type="checkbox" name="cuisine" value="Indian" data-filter-cuisine> Indian</label>
+              <label><input type="checkbox" name="cuisine" value="Italian" data-filter-cuisine> Italian</label>
+              <label><input type="checkbox" name="cuisine" value="Mexican" data-filter-cuisine> Mexican</label>
+              <label><input type="checkbox" name="cuisine" value="Chinese" data-filter-cuisine> Chinese</label>
+            </fieldset>
+
+            <fieldset>
+              <legend>Filter by Meal</legend>
+              <label><input type="checkbox" name="meal" value="Breakfast" data-filter-meal> Breakfast</label>
+              <label><input type="checkbox" name="meal" value="Lunch" data-filter-meal> Lunch</label>
+              <label><input type="checkbox" name="meal" value="Dinner" data-filter-meal> Dinner</label>
+              <label><input type="checkbox" name="meal" value="Snack" data-filter-meal> Snack</label>
+            </fieldset>
+
+            <!-- Sort control -->
+            <label for="sort-select" class="sort-label">Sort by:</label>
+            <select id="sort-select" data-sort>
+              <option value="relevance">Relevance</option>
+              <option value="time-asc">Prep time: Low → High</option>
+              <option value="time-desc">Prep time: High → Low</option>
+              <option value="alpha">Alphabetical</option>
+            </select>
+          </div>
+        </section>
       </div>
     </header>
-    
-
-    <!-- Controls: Search + Filters + Sort -->
-    <section class="controls container" aria-labelledby="controls-heading">
-      <h2 id="controls-heading" class="visually-hidden">Search and filter recipes</h2>
-
-      <!-- Search form -->
-      <form id="search-form" class="search-form" role="search" aria-label="Search recipes">
-        <label for="search-input" class="visually-hidden">Search recipes</label>
-        <input
-          id="search-input"
-          data-search-input
-          name="q"
-          type="search"
-          placeholder="Search by recipe name or ingredient (e.g. 'chicken, tomato')"
-          autocomplete="off"
-          aria-label="Search recipes"
-        />
-        <button type="submit" data-search-btn aria-label="Search">Search</button>
-        <button type="button" data-clear-btn aria-label="Clear" title="Clear search">Clear</button>
-      </form>
-
-      
-
-      <!-- Filters -->
-      <div class="filters" role="region" aria-label="Recipe filters">
-        <fieldset>
-          <legend>Filter by Cuisine</legend>
-          <label><input type="checkbox" name="cuisine" value="Indian" data-filter-cuisine> Indian</label>
-          <label><input type="checkbox" name="cuisine" value="Italian" data-filter-cuisine> Italian</label>
-          <label><input type="checkbox" name="cuisine" value="Mexican" data-filter-cuisine> Mexican</label>
-          <label><input type="checkbox" name="cuisine" value="Chinese" data-filter-cuisine> Chinese</label>
-        </fieldset>
-
-        <fieldset>
-          <legend>Filter by Meal</legend>
-          <label><input type="checkbox" name="meal" value="Breakfast" data-filter-meal> Breakfast</label>
-          <label><input type="checkbox" name="meal" value="Lunch" data-filter-meal> Lunch</label>
-          <label><input type="checkbox" name="meal" value="Dinner" data-filter-meal> Dinner</label>
-          <label><input type="checkbox" name="meal" value="Snack" data-filter-meal> Snack</label>
-        </fieldset>
-
-        <!-- Sort control -->
-        <label for="sort-select" class="sort-label">Sort by:</label>
-        <select id="sort-select" data-sort>
-          <option value="relevance">Relevance</option>
-          <option value="time-asc">Prep time: Low → High</option>
-          <option value="time-desc">Prep time: High → Low</option>
-          <option value="alpha">Alphabetical</option>
-        </select>
-      </div>
-    </section>
 
     <!-- Results / Recipes -->
     <main id="results" class="container results" role="main" aria-live="polite">
@@ -164,6 +158,43 @@
       </li>
     </template>
 
+    <!-- About Section -->
+    <section class="about-page container">
+      <h1>About Recipe Finder</h1>
+      <p>
+        Recipe Finder is a simple, interactive web project built with
+        <strong>HTML, CSS, and JavaScript</strong>.
+        It allows you to search, filter, and explore recipes quickly.
+      </p>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <h2>Our Goal</h2>
+          <p>
+            To make cooking easier by providing quick access to recipes from
+            different cuisines and meal types.
+          </p>
+        </div>
+        <div class="about-card">
+          <h2>Features</h2>
+          <ul>
+            <li>Search recipes by name or ingredients</li>
+            <li>Filter by cuisine & meal type</li>
+            <li>Sort by prep time or alphabetical order</li>
+            <li>View full recipe details in a modal</li>
+          </ul>
+        </div>
+        <div class="about-card">
+          <h2>Built For</h2>
+          <p>
+            Students & beginners learning front-end web development.
+            This project uses clean, responsive design with modern
+            gradients for an attractive look.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="site-footer container" role="contentinfo">
       <p>Built with — Interactive Recipe Finder</p>
@@ -172,7 +203,6 @@
   </div>
 
   <!-- Add your JavaScript file here (script.js) -->
-   <script src="app.js"></script>
-  <!-- <script src="script.js" defer></script> -->
+  <script src="app.js"></script>
 </body>
 </html>
