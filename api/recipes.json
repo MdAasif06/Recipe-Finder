@@ -1,0 +1,302 @@
+[
+    
+  {
+    "id": 1,
+    "title": "Butter Chicken",
+    "desc": "Creamy tomato-based curry with tender chicken pieces.",
+    "image": "https://images.unsplash.com/photo-1728910107534-e04e261768ae?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8QnV0dGVyJTIwQ2hpY2tlbnxlbnwwfHwwfHx8MA%3D%3D",
+    "cuisine": "Indian",
+    "meal": "Lunch",
+    "time": 40,
+    "ingredients": ["500g chicken", "2 tomatoes", "Cream", "Butter", "Spices"],
+    "instructions": ["Marinate chicken with spices.", "Cook in butter and tomato sauce.", "Add cream and simmer.", "Serve with naan or rice."]
+  },
+  {
+    "id": 2,
+    "title": "Paneer Butter Masala",
+    "desc": "Soft paneer cubes in rich creamy tomato gravy.",
+    "image": "https://images.unsplash.com/photo-1701579231378-3726490a407b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8UGFuZWVyJTIwQnV0dGVyJTIwTWFzYWxhfGVufDB8fDB8fHww",
+    "cuisine": "Indian",
+    "meal": "Lunch",
+    "time": 30,
+    "ingredients": ["200g paneer", "2 tomatoes", "Cream", "Butter", "Spices"],
+    "instructions": ["Cook tomatoes with spices.", "Add butter and cream.", "Add paneer cubes and simmer.", "Serve hot with naan."]
+  },
+  {
+    "id": 3,
+    "title": "Chole (Chickpea Curry)",
+    "desc": "Spicy and tangy chickpea curry from North India.",
+    "image": "https://plus.unsplash.com/premium_photo-1695456063769-e291a14c3ca1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8KENoaWNrcGVhJTIwQ3VycnkpfGVufDB8fDB8fHww",
+    "cuisine": "Indian",
+    "meal": "Lunch",
+    "time": 35,
+    "ingredients": ["1 cup chickpeas", "2 onions", "2 tomatoes", "Spices", "Oil"],
+    "instructions": ["Soak chickpeas overnight.", "Cook with onions, tomatoes, and spices.", "Simmer until thick.", "Serve with bhature or rice."]
+  },
+  {
+    "id": 4,
+    "title": "Masala Dosa",
+    "desc": "Crispy rice crepe filled with spiced potato filling.",
+    "image": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8TWFzYWxhJTIwRG9zYXxlbnwwfHwwfHx8MA%3D%3D",
+    "cuisine": "Indian",
+    "meal": "Breakfast",
+    "time": 25,
+    "ingredients": ["Dosa batter", "Potatoes", "Onion", "Spices", "Oil"],
+    "instructions": ["Prepare dosa batter.", "Cook potato filling with spices.", "Spread batter on pan and fill with potatoes.", "Fold and serve with chutney."]
+  },
+  {
+    "id": 5,
+    "title": "Idli with Sambar",
+    "desc": "Steamed rice cakes served with spicy lentil soup.",
+    "image": "https://images.unsplash.com/photo-1630383249896-424e482df921?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8SWRsaSUyMHdpdGglMjBTYW1iYXJ8ZW58MHx8MHx8fDA%3D",
+    "cuisine": "Indian",
+    "meal": "Breakfast",
+    "time": 30,
+    "ingredients": ["Rice", "Urad dal", "Sambar", "Vegetables", "Spices"],
+    "instructions": ["Prepare idli batter and steam.", "Cook sambar with vegetables.", "Serve idli with hot sambar and chutney."]
+  },
+  {
+    "id": 6,
+    "title": "Rajma (Kidney Bean Curry)",
+    "desc": "Hearty kidney bean curry served with rice.",
+    "image": "https://plus.unsplash.com/premium_photo-1712678665724-7c3faa117a2d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8UmFqbWElMjAoS2lkbmV5JTIwQmVhbiUyMEN1cnJ5KXxlbnwwfHwwfHx8MA%3D%3D",
+    "cuisine": "Indian",
+    "meal": "Lunch",
+    "time": 40,
+    "ingredients": ["1 cup kidney beans", "2 onions", "2 tomatoes", "Spices", "Oil"],
+    "instructions": ["Soak kidney beans overnight.", "Cook with onions, tomatoes, and spices.", "Simmer until thick.", "Serve with rice."]
+  },
+  {
+    "id": 7,
+    "title": "Palak Paneer",
+    "desc": "Paneer cubes cooked in smooth spinach gravy.",
+    "image": "https://images.unsplash.com/photo-1589647363585-f4a7d3877b10?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8UGFsYWslMjBQYW5lZXJ8ZW58MHx8MHx8fDA%3D",
+    "cuisine": "Indian",
+    "meal": "Lunch",
+    "time": 25,
+    "ingredients": ["200g paneer", "Spinach", "Onion", "Tomatoes", "Spices"],
+    "instructions": ["Blanch spinach and make puree.", "Cook onions and tomatoes with spices.", "Add paneer and spinach gravy.", "Serve hot with roti or rice."]
+  },
+  {
+    "id": 8,
+    "title": "Aloo Paratha",
+    "desc": "Stuffed Indian flatbread with spiced potato filling.",
+    "image": "https://images.unsplash.com/photo-1683533761804-5fc12be0f684?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8QWxvbyUyMFBhcmF0aGF8ZW58MHx8MHx8fDA%3D",
+    "cuisine": "Indian",
+    "meal": "Breakfast",
+    "time": 20,
+    "ingredients": ["Wheat flour", "Potatoes", "Spices", "Butter/Oil"],
+    "instructions": ["Make dough from wheat flour.", "Prepare spiced potato filling.", "Stuff and roll paratha.", "Cook on tawa and serve hot."]
+  },
+  {
+    "id": 9,
+    "title": "Biryani",
+    "desc": "Fragrant rice dish with spices, meat or vegetables.",
+    "image": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8QmlyeWFuaXxlbnwwfHwwfHx8MA%3D%3D",
+    "cuisine": "Indian",
+    "meal": "Dinner",
+    "time": 50,
+    "ingredients": ["Basmati rice", "Meat or vegetables", "Spices", "Onion", "Yogurt"],
+    "instructions": ["Marinate meat with spices.", "Cook rice partially.", "Layer rice and meat, cook together.", "Serve hot with raita."]
+  },
+  {
+    "id": 10,
+    "title": "Dhokla",
+    "desc": "Steamed savory cake made from fermented chickpea batter.",
+    "image": "https://media.istockphoto.com/id/2154971502/photo/famous-gujrati-snack-dhokla-made-with-gram-flour-and-sugar-syrup-decorated-with-mint-and.webp?a=1&b=1&s=612x612&w=0&k=20&c=MacEDJlATPi0-ztKaDwBRJxq4k9KPKI6MhZwEoZdQeg=",
+    "cuisine": "Indian",
+    "meal": "Snack",
+    "time": 25,
+    "ingredients": ["Gram flour", "Yogurt", "Water", "Spices", "Oil"],
+    "instructions": ["Prepare batter and ferment.", "Steam in plates.", "Prepare tempering and pour over dhokla.", "Serve with chutney."]
+  }
+,
+
+  {
+    "id": 11,
+    "title": "  ",
+    "desc": "Fluffy pancakes topped with sweet maple syrup.",
+    "image": "https://media.istockphoto.com/id/161170090/photo/pancakes-with-berries-and-maple-syrup.webp?a=1&b=1&s=612x612&w=0&k=20&c=vLBnyfpcHHA07gEXKkai5FAKad3vD0ugmNwOLhhFpZc=",
+    "cuisine": "American",
+    "meal": "Breakfast",
+    "time": 15,
+    "ingredients": ["1 cup flour", "2 eggs", "1 cup milk", "2 tbsp sugar", "Maple syrup"],
+    "instructions": ["Mix dry ingredients.", "Add eggs and milk.", "Cook on skillet until golden.", "Serve with maple syrup."]
+  },
+  {
+    "id": 12,
+    "title": "Avocado Toast",
+    "desc": "Healthy breakfast with smashed avocado on wholegrain toast.",
+    "image": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&auto=format&fit=crop&q=60",
+    "cuisine": "American",
+    "meal": "Breakfast",
+    "time": 10,
+    "ingredients": ["2 slices bread", "1 avocado", "Salt", "Pepper", "Lemon juice"],
+    "instructions": ["Toast bread.", "Mash avocado with lemon, salt, pepper.", "Spread on toast and serve."]
+  },
+  {
+    "id": 13,
+    "title": "Oatmeal with Fruits",
+    "desc": "Warm oatmeal served with fresh fruits and nuts.",
+    "image": "https://images.unsplash.com/photo-1551432512-7165c9992a13?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fE9hdG1lYWwlMjB3aXRoJTIwRnJ1aXRzfGVufDB8fDB8fHww",
+    "cuisine": "American",
+    "meal": "Breakfast",
+    "time": 12,
+    "ingredients": ["1 cup oats", "2 cups milk", "Mixed fruits", "Honey", "Nuts"],
+    "instructions": ["Cook oats with milk.", "Top with fruits, nuts, and honey.", "Serve warm."]
+  },
+  {
+    "id": 14,
+    "title": "Greek Yogurt Parfait",
+    "desc": "Layered Greek yogurt with granola and berries.",
+    "image": "https://images.unsplash.com/photo-1670843839025-d50924a51f31?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fEdyZWVrJTIwWW9ndXJ0JTIwUGFyZmFpdHxlbnwwfHwwfHx8MA%3D%3D",
+    "cuisine": "Greek",
+    "meal": "Breakfast",
+    "time": 8,
+    "ingredients": ["Greek yogurt", "Granola", "Berries", "Honey"],
+    "instructions": ["Layer yogurt, granola, berries in a glass.", "Drizzle with honey.", "Serve chilled."]
+  },
+  {
+    "id": 15,
+    "title": "Grilled Chicken Salad",
+    "desc": "Fresh salad with grilled chicken, veggies, and vinaigrette.",
+    "image": "https://plus.unsplash.com/premium_photo-1695399566183-df3e7778e198?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8R3JpbGxlZCUyMENoaWNrZW4lMjBTYWxhZHxlbnwwfHwwfHx8MA%3D%3D",
+    "cuisine": "American",
+    "meal": "Lunch",
+    "time": 20,
+    "ingredients": ["Chicken breast", "Lettuce", "Tomatoes", "Cucumber", "Vinaigrette"],
+    "instructions": ["Grill chicken.", "Mix salad veggies.", "Top with chicken and vinaigrette."]
+  },
+  {
+    "id": 16,
+    "title": "Veggie Wrap",
+    "desc": "Whole wheat wrap filled with fresh vegetables and hummus.",
+    "image": "https://media.istockphoto.com/id/1352474720/photo/fresh-paneer-roll-with-fresh-tomatos-salad-cheese-and-onions-isolated-on-bright-blue.webp?a=1&b=1&s=612x612&w=0&k=20&c=HHeBNencFEcT2ZplHH2SJ-5us8L-m8GYHmfMhoMuzaw=",
+    "cuisine": "Mediterranean",
+    "meal": "Lunch",
+    "time": 15,
+    "ingredients": ["Whole wheat wrap", "Lettuce", "Tomatoes", "Cucumber", "Hummus"],
+    "instructions": ["Spread hummus on wrap.", "Add veggies.", "Roll tightly and serve."]
+  },
+  {
+    "id": 17,
+    "title": "Spaghetti Bolognese",
+    "desc": "Classic Italian pasta with rich meat sauce.",
+    "image": "https://plus.unsplash.com/premium_photo-1664478291780-0c67f5fb15e6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8U3BhZ2hldHRpJTIwQm9sb2duZXNlfGVufDB8fDB8fHww",
+    "cuisine": "Italian",
+    "meal": "Dinner",
+    "time": 35,
+    "ingredients": ["Spaghetti", "Ground beef", "Tomato sauce", "Onion", "Garlic"],
+    "instructions": ["Cook spaghetti.", "Prepare meat sauce.", "Mix and serve hot."]
+  },
+  {
+    "id": 18,
+    "title": "Vegetable Stir Fry",
+    "desc": "Quick stir fry with mixed vegetables and soy sauce.",
+    "image": "https://plus.unsplash.com/premium_photo-1664472637341-3ec829d1f4df?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8VmVnZXRhYmxlJTIwU3RpciUyMEZyeXxlbnwwfHwwfHx8MA%3D%3D",
+    "cuisine": "Chinese",
+    "meal": "Dinner",
+    "time": 20,
+    "ingredients": ["Broccoli", "Carrots", "Bell peppers", "Soy sauce", "Garlic"],
+    "instructions": ["Heat oil.", "Add veggies and garlic.", "Stir fry and season with soy sauce."]
+  },
+  {
+    "id": 19,
+    "title": "Grilled Salmon",
+    "desc": "Tender salmon fillet grilled with lemon and herbs.",
+    "image": "https://plus.unsplash.com/premium_photo-1723478417559-2349252a3dda?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8R3JpbGxlZCUyMFNhbG1vbnxlbnwwfHwwfHx8MA%3D%3D",
+    "cuisine": "American",
+    "meal": "Dinner",
+    "time": 25,
+    "ingredients": ["Salmon fillet", "Lemon", "Olive oil", "Salt", "Pepper"],
+    "instructions": ["Season salmon.", "Grill until cooked.", "Serve with lemon wedges."]
+  },
+  {
+    "id": 20,
+    "title": "Tacos",
+    "desc": "Soft tortillas filled with seasoned meat, veggies, and salsa.",
+    "image": "https://images.unsplash.com/photo-1624300629298-e9de39c13be5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8VGFjb3N8ZW58MHx8MHx8fDA%3D",
+    "cuisine": "Mexican",
+    "meal": "Lunch",
+    "time": 20,
+    "ingredients": ["Tortillas", "Ground beef", "Lettuce", "Cheese", "Salsa"],
+    "instructions": ["Cook beef with seasoning.", "Assemble tacos with toppings.", "Serve immediately."]
+  },
+  {
+    "id": 21,
+    "title": "Margherita Pizza",
+    "desc": "Classic pizza with fresh tomatoes, mozzarella, and basil.",
+    "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8TWFyZ2hlcml0YSUyMFBpenphfGVufDB8fDB8fHww",
+    "cuisine": "Italian",
+    "meal": "Dinner",
+    "time": 30,
+    "ingredients": ["Pizza dough", "Tomato sauce", "Mozzarella", "Fresh basil", "Olive oil"],
+    "instructions": ["Preheat oven.", "Spread tomato sauce on dough.", "Add mozzarella and basil.", "Bake until crust is golden.", "Drizzle olive oil and serve."]
+  },
+  {
+    "id": 22,
+    "title": "Fettuccine Alfredo",
+    "desc": "Creamy pasta dish with butter, cream, and Parmesan cheese.",
+    "image": "https://images.unsplash.com/photo-1693609929945-b01ae4f2d602?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8RmV0dHVjY2luZSUyMEFsZnJlZG98ZW58MHx8MHx8fDA%3D",
+    "cuisine": "Italian",
+    "meal": "Lunch",
+    "time": 25,
+    "ingredients": ["Fettuccine pasta", "Butter", "Heavy cream", "Parmesan cheese", "Salt, pepper"],
+    "instructions": ["Cook pasta until al dente.", "Melt butter and cream in pan.", "Add Parmesan and mix.", "Toss pasta in sauce.", "Serve hot."]
+  },
+  {
+    "id": 23,
+    "title": "Tiramisu",
+    "desc": "Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.",
+    "image": "https://media.istockphoto.com/id/517368976/photo/slice-of-dessert.webp?a=1&b=1&s=612x612&w=0&k=20&c=jnz3e9AETwq2F3EMtyASd6wR2-7-dIMyN5dXxCJ5Tu8=",
+    "cuisine": "Italian",
+    "meal": "Dessert",
+    "time": 20,
+    "ingredients": ["Ladyfingers", "Mascarpone cheese", "Eggs", "Sugar", "Coffee", "Cocoa powder"],
+    "instructions": ["Dip ladyfingers in coffee.", "Layer with mascarpone mixture.", "Repeat layers.", "Dust cocoa powder on top.", "Chill before serving."]
+  }
+  ,{
+    "id": 23,
+    "title": "Kung Pao Chicken",
+    "desc": "Spicy stir-fried chicken with peanuts, vegetables, and chili peppers.",
+    "image": "https://media.istockphoto.com/id/507124607/photo/homemade-kung-pao-chicken.webp?a=1&b=1&s=612x612&w=0&k=20&c=9Ru58XE_wazTMfZDAU682x9RULrdUuzYLuS53xszjoM=",
+    "cuisine": "Chinese",
+    "meal": "Lunch",
+    "time": 25,
+    "ingredients": ["Chicken", "Peanuts", "Bell peppers", "Chili peppers", "Soy sauce", "Garlic", "Ginger"],
+    "instructions": ["Cut chicken into cubes.", "Stir-fry chicken with garlic and ginger.", "Add vegetables and chili.", "Add soy sauce and peanuts.", "Cook until sauce thickens and serve."]
+  },
+  {
+    "id": 24,
+    "title": "Vegetable Fried Rice",
+    "desc": "Quick fried rice with mixed vegetables and soy sauce.",
+    "image": "https://images.unsplash.com/photo-1581184953963-d15972933db1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8VmVnZXRhYmxlJTIwRnJpZWQlMjBSaWNlfGVufDB8fDB8fHww",
+    "cuisine": "Chinese",
+    "meal": "Dinner",
+    "time": 20,
+    "ingredients": ["Cooked rice", "Carrots", "Peas", "Bell peppers", "Soy sauce", "Garlic", "Oil"],
+    "instructions": ["Heat oil in a pan.", "Add garlic and vegetables.", "Stir-fry until tender.", "Add rice and soy sauce.", "Mix well and serve hot."]
+  },
+  {
+    "id": 25,
+    "title": "Chicken Tacos",
+    "desc": "Soft tortillas filled with seasoned chicken, veggies, and salsa.",
+    "image": "https://images.unsplash.com/photo-1570461226513-e08b58a52c53?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q2hpY2tlbiUyMFRhY29zfGVufDB8fDB8fHww",
+    "cuisine": "Mexican",
+    "meal": "Lunch",
+    "time": 20,
+    "ingredients": ["Tortillas", "Chicken breast", "Lettuce", "Tomatoes", "Salsa", "Cheese"],
+    "instructions": ["Cook chicken with seasoning.", "Warm tortillas.", "Fill tortillas with chicken, veggies, and salsa.", "Top with cheese and serve."]
+  },
+  {
+    "id": 26,
+    "title": "Guacamole",
+    "desc": "Creamy avocado dip with tomatoes, onions, and lime juice.",
+    "image": "https://plus.unsplash.com/premium_photo-1681406689584-2f7612fa98a4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8R3VhY2Ftb2xlfGVufDB8fDB8fHww",
+    "cuisine": "Mexican",
+    "meal": "Snack",
+    "time": 10,
+    "ingredients": ["Avocados", "Tomatoes", "Onions", "Lime juice", "Salt", "Cilantro"],
+    "instructions": ["Mash avocados.", "Mix in chopped tomatoes and onions.", "Add lime juice, salt, and cilantro.", "Serve with tortilla chips."]
+  }
+]

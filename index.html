@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interactive Recipe Finder</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Interactive Recipe Finder — search, filter and view recipes. Built with HTML, CSS & JavaScript." />
+</head>
+<body>
+  <!-- Page wrapper -->
+  <div id="app" class="app-root">
+      <!-- Navbar -->
+  <!-- <nav class="navbar">
+    <div class="container">
+      <div class="brand">Recipe Finder</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#recipes">Recipes</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+  </nav> -->
+     
+
+    <!-- Header / Hero -->
+    <header class="site-header" role="banner">
+      <div class="container">
+        <h1 class="site-title">Interactive Recipe Finder</h1>
+        <p class="site-subtitle">Search recipes, filter by cuisine or meal type, and open full instructions — fast.</p>
+      </div>
+    </header>
+    
+
+    <!-- Controls: Search + Filters + Sort -->
+    <section class="controls container" aria-labelledby="controls-heading">
+      <h2 id="controls-heading" class="visually-hidden">Search and filter recipes</h2>
+
+      <!-- Search form -->
+      <form id="search-form" class="search-form" role="search" aria-label="Search recipes">
+        <label for="search-input" class="visually-hidden">Search recipes</label>
+        <input
+          id="search-input"
+          data-search-input
+          name="q"
+          type="search"
+          placeholder="Search by recipe name or ingredient (e.g. 'chicken, tomato')"
+          autocomplete="off"
+          aria-label="Search recipes"
+        />
+        <button type="submit" data-search-btn aria-label="Search">Search</button>
+        <button type="button" data-clear-btn aria-label="Clear" title="Clear search">Clear</button>
+      </form>
+
+      
+
+      <!-- Filters -->
+      <div class="filters" role="region" aria-label="Recipe filters">
+        <fieldset>
+          <legend>Filter by Cuisine</legend>
+          <label><input type="checkbox" name="cuisine" value="Indian" data-filter-cuisine> Indian</label>
+          <label><input type="checkbox" name="cuisine" value="Italian" data-filter-cuisine> Italian</label>
+          <label><input type="checkbox" name="cuisine" value="Mexican" data-filter-cuisine> Mexican</label>
+          <label><input type="checkbox" name="cuisine" value="Chinese" data-filter-cuisine> Chinese</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Filter by Meal</legend>
+          <label><input type="checkbox" name="meal" value="Breakfast" data-filter-meal> Breakfast</label>
+          <label><input type="checkbox" name="meal" value="Lunch" data-filter-meal> Lunch</label>
+          <label><input type="checkbox" name="meal" value="Dinner" data-filter-meal> Dinner</label>
+          <label><input type="checkbox" name="meal" value="Snack" data-filter-meal> Snack</label>
+        </fieldset>
+
+        <!-- Sort control -->
+        <label for="sort-select" class="sort-label">Sort by:</label>
+        <select id="sort-select" data-sort>
+          <option value="relevance">Relevance</option>
+          <option value="time-asc">Prep time: Low → High</option>
+          <option value="time-desc">Prep time: High → Low</option>
+          <option value="alpha">Alphabetical</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Results / Recipes -->
+    <main id="results" class="container results" role="main" aria-live="polite">
+      <h2 class="section-title">Recipes</h2>
+
+      <!-- Summary / info -->
+      <div class="results-meta" data-results-meta>
+        <span data-results-count>0</span> recipes found
+      </div>
+
+      <!-- Grid of recipe cards -->
+      <ul class="recipe-grid" id="recipe-grid" data-recipe-grid>
+        <!-- JS will populate recipe cards here by cloning the template below -->
+      </ul>
+
+      <!-- Empty state -->
+      <div class="empty-state visually-hidden" data-empty-state>
+        <p>No recipes match your search or filters. Try clearing filters or searching different ingredients.</p>
+      </div>
+    </main>
+
+    <!-- Pagination (optional) -->
+    <nav class="pagination container" aria-label="Recipe pagination" data-pagination>
+      <!-- JS can add page buttons here -->
+    </nav>
+
+    <!-- Recipe detail modal (hidden by default) -->
+    <div id="recipe-modal" class="modal visually-hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title" data-modal>
+      <div class="modal-content">
+        <button class="modal-close" data-modal-close aria-label="Close recipe details">&times;</button>
+        <h3 id="modal-title" data-modal-title>Recipe Title</h3>
+        <p class="modal-subtitle" data-modal-subtitle>Short description or summary</p>
+
+        <div class="modal-body">
+          <img alt="" data-modal-image class="modal-image" />
+          <section class="ingredients" aria-labelledby="ingredients-heading">
+            <h4 id="ingredients-heading">Ingredients</h4>
+            <ul data-modal-ingredients></ul>
+          </section>
+
+          <section class="instructions" aria-labelledby="instructions-heading">
+            <h4 id="instructions-heading">Instructions</h4>
+            <ol data-modal-instructions></ol>
+          </section>
+
+          <section class="meta">
+            <p>Prep time: <span data-modal-time></span></p>
+            <p>Cuisine: <span data-modal-cuisine></span></p>
+            <p>Meal: <span data-modal-meal></span></p>
+          </section>
+        </div>
+      </div>
+
+      <!-- modal backdrop -->
+      <div class="modal-backdrop" data-modal-backdrop></div>
+    </div>
+
+    <!-- Hidden template for recipe card (JS clones this) -->
+    <template id="recipe-card-template">
+      <li class="recipe-card" role="article">
+        <article>
+          <button class="card-open" data-card-open aria-label="Open recipe details">
+            <img src="" alt="" data-card-image class="card-image" />
+            <div class="card-content">
+              <h3 data-card-title class="card-title">Recipe Name</h3>
+              <p data-card-desc class="card-desc">Short description / ingredients highlight</p>
+              <div class="card-meta">
+                <span data-card-time class="card-time">15 min</span>
+                <span data-card-cuisine class="card-cuisine">Indian</span>
+              </div>
+            </div>
+          </button>
+        </article>
+      </li>
+    </template>
+
+    <!-- Footer -->
+    <footer class="site-footer container" role="contentinfo">
+      <p>Built with — Interactive Recipe Finder</p>
+    </footer>
+
+  </div>
+
+  <!-- Add your JavaScript file here (script.js) -->
+   <script src="app.js"></script>
+  <!-- <script src="script.js" defer></script> -->
+</body>
+</html>
