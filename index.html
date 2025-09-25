@@ -25,8 +25,8 @@
               <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#recipes">Recipes</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
               </ul>
 
               <!-- Hamburger icon -->
@@ -283,38 +283,84 @@
         </li>
       </template>
       <!-- About Section -->
-  <section class="about container">
-    <h1>About Recipe Finder</h1>
-    <p>
-      Welcome to <strong>Interactive Recipe Finder</strong> — a simple web app built using 
-      <b>HTML, CSS, and JavaScript</b>. It allows you to explore delicious recipes, 
-      search by name or ingredient, and filter by cuisine or meal type. 
-    </p>
-    <p>
-      Our goal is to make cooking easy and fun by giving you quick access 
-      to popular dishes from around the world, including <em>Indian</em>, 
-      <em>Italian</em>, <em>Chinese</em>, and <em>Mexican</em> cuisines.
-    </p>
+      <section id="about" class="about container">
+        <h1>About Recipe Finder</h1>
+        <p>
+          Welcome to <strong>Interactive Recipe Finder</strong> — a simple web
+          app built using <b>HTML, CSS, and JavaScript</b>. It allows you to
+          explore delicious recipes, search by name or ingredient, and filter by
+          cuisine or meal type.
+        </p>
+        <p>
+          Our goal is to make cooking easy and fun by giving you quick access to
+          popular dishes from around the world, including <em>Indian</em>,
+          <em>Italian</em>, <em>Chinese</em>, and <em>Mexican</em> cuisines.
+        </p>
 
-    <h2>Features</h2>
-    <ul class="features-list">
-      <li>Search recipes by name or ingredient</li>
-      <li>Filter by cuisine (Indian, Italian, Chinese, Mexican)</li>
-      <li>Filter by meal type (Breakfast, Lunch, Dinner, Snack)</li>
-      <li>Sort recipes by prep time or alphabetically</li>
-      <li> View step-by-step instructions</li>
-    </ul>
+        <h2>Features</h2>
+        <ul class="features-list">
+          <li>Search recipes by name or ingredient</li>
+          <li>Filter by cuisine (Indian, Italian, Chinese, Mexican)</li>
+          <li>Filter by meal type (Breakfast, Lunch, Dinner, Snack)</li>
+          <li>Sort recipes by prep time or alphabetically</li>
+          <li>View step-by-step instructions</li>
+        </ul>
 
-    <h2>Our Mission</h2>
-    <p>
-      To provide a fun, interactive, and easy-to-use recipe finder that inspires 
-      people to try new dishes and improve their cooking skills.
-    </p>
+        <h2>Our Mission</h2>
+        <p>
+          To provide a fun, interactive, and easy-to-use recipe finder that
+          inspires people to try new dishes and improve their cooking skills.
+        </p>
+      </section>
+<!-- Contact Form Section -->
+  <section id="contact" class="contact-section container">
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p>Have questions or suggestions? Fill out the form below or email us directly at <a href="mailto:info@recipefinder.com">info@recipefinder.com</a>.</p>
+      <ul>
+        <li>📍 Address: 123 Recipe Street, Food City</li>
+        <li>📞 Phone: +91 123-456-7890</li>
+        <li>✉ Email: info@recipefinder.com</li>
+      </ul>
+    </div>
+
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="name">Name *</label>
+        <input type="text" id="name" placeholder="Your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" placeholder="Your email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" rows="5" placeholder="Your message" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
+      
 
       <!-- Footer -->
-      <footer class="site-footer container" role="contentinfo">
-        <p>Built with — Interactive Recipe Finder</p>
+      <footer class="site-footer">
+        <div class="container footer-content">
+          <div class="footer-brand">
+            <h2>Recipe Finder</h2>
+            <p>Discover recipes, filter, and enjoy cooking!</p>
+          </div>
+
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+          </ul>
+
+          <p class="footer-copy">
+            &copy; 2025 Recipe Finder. All rights reserved.
+          </p>
+        </div>
       </footer>
     </div>
 
