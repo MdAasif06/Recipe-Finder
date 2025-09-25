@@ -1,6 +1,6 @@
-/* ================================
-   DOM Elements
-================================ */
+
+  //  DOM Elements
+
 const recipeGrid = document.querySelector("[data-recipe-grid]");
 const template = document.querySelector("#recipe-card-template");
 const resultsCount = document.querySelector("[data-results-count]");
@@ -25,15 +25,18 @@ const modalTime = document.querySelector("[data-modal-time]");
 const modalCuisine = document.querySelector("[data-modal-cuisine]");
 const modalMeal = document.querySelector("[data-modal-meal]");
 
-/* ================================
-   State
-================================ */
+
+
+
+
+  //  State
+
 let recipes = [];        // all recipes from JSON
 let currentRecipes = []; // filtered/sorted recipes
 
-/* ================================
-   Fetch Recipes from JSON
-================================ */
+
+  //  Fetch Recipes from JSON
+
 fetch("./api/recipes.json") // make sure path is correct
   .then(res => res.json())
   .then(data => {
@@ -43,33 +46,53 @@ fetch("./api/recipes.json") // make sure path is correct
   })
   .catch(err => console.error("Failed to load recipes:", err));
 
-/* ================================
-   Render Functions
-================================ */
+
+//navbar
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+// Render Functions
 function renderRecipes(list) {
   recipeGrid.innerHTML = "";
+
   if (!list.length) {
     emptyState.classList.remove("visually-hidden");
   } else {
     emptyState.classList.add("visually-hidden");
+
     list.forEach(recipe => {
-      const card = template.content.cloneNode(true);
+      // ✅ clone the <li> element directly instead of fragment
+      const card = template.content.firstElementChild.cloneNode(true);
+
+      // Fill card content
       card.querySelector("[data-card-title]").textContent = recipe.title;
       card.querySelector("[data-card-desc]").textContent = recipe.desc;
       card.querySelector("[data-card-time]").textContent = `${recipe.time} min`;
       card.querySelector("[data-card-cuisine]").textContent = recipe.cuisine;
       card.querySelector("[data-card-image]").src = recipe.image;
       card.querySelector("[data-card-image]").alt = recipe.title;
-      card.querySelector("[data-card-open]").addEventListener("click", () => openModal(recipe));
+
+      // ✅ Attach modal open event
+      card.querySelector("[data-card-open]").addEventListener("click", () => {
+        openModal(recipe);
+      });
+
       recipeGrid.appendChild(card);
     });
   }
+
+  // Update results count
   resultsCount.textContent = list.length;
 }
 
-/* ================================
-   Search + Filter + Sort
-================================ */
+
+
+  //  Search + Filter + Sort
+
 function applyFilters() {
   const query = searchInput.value.toLowerCase().trim();
   const selectedCuisines = Array.from(cuisineFilters).filter(cb => cb.checked).map(cb => cb.value);
@@ -93,9 +116,9 @@ function applyFilters() {
   renderRecipes(currentRecipes);
 }
 
-/* ================================
-   Modal Functions
-================================ */
+
+  //  Modal Functions
+
 function openModal(recipe) {
   modal.classList.remove("visually-hidden");
   modalTitle.textContent = recipe.title;
@@ -113,9 +136,9 @@ function closeModal() {
   modal.classList.add("visually-hidden");
 }
 
-/* ================================
-   Event Listeners
-================================ */
+
+  //  Event Listeners
+
 searchForm.addEventListener("submit", e => {
   e.preventDefault();
   applyFilters();
@@ -140,10 +163,3 @@ document.addEventListener("keydown", e => {
   if (e.key === "Escape") closeModal();
 });
 
-//navbar
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});

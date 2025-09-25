@@ -1,6 +1,5 @@
-/* ================================
-   Global Styles
-================================ */
+
+   /* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +19,13 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+/* Container utility */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Navbar */
@@ -73,46 +79,56 @@ body {
   cursor: pointer;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #ff6f61;
-    flex-direction: column;
-    width: 200px;
-    display: none;
-    padding: 1rem;
-    border-radius: 0 0 8px 8px;
-  }
 
-  .nav-links.show {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
+/* About Page */
+.about {
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 1rem;
+  text-align: left;
 }
 
-/* Container utility */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+.about h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #4facfe;
+  /* background: linear-gradient(135deg, #00f2fe, #4facfe); */
 }
 
-/* ================================
-   Header
-================================ */
+.about h2 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #4facfe;
+}
+
+.about p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.features-list li {
+ background: linear-gradient(135deg, #00f2fe, #4facfe);
+  margin: 0.5rem 0;
+  padding: 0.7rem 1rem;
+  border-left: 5px solid #ff6f61;
+  border-radius: 6px;
+}
+
+
+   /* Header */
+
 .site-header {
   background: linear-gradient(135deg, #4facfe, #00f2fe);
-  /* background-color: yellow; */
   color: #fff;
   text-align: center;
-  height: 90px;
-  width: 100%;
+  max-height:100px;
   padding: 2rem 1rem;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -130,9 +146,8 @@ body {
   opacity: 0.9;
 }
 
-/* ================================
-   Controls Section
-================================ */
+
+   /* Controls Section */
 .controls {
   margin: 2rem auto;
   background: #fff;
@@ -167,8 +182,7 @@ body {
   border: none;
   border-radius: 8px;
   background: linear-gradient(135deg, #43e97b, #38f9d7);
-  color: #000;
-  font-weight: 600;
+  color: #fff;
   cursor: pointer;
   transition: transform 0.2s, opacity 0.2s;
 }
@@ -206,9 +220,9 @@ body {
   border: 1px solid #ddd;
 }
 
-/* ================================
-   Results / Recipes Grid
-================================ */
+
+   /* Results / Recipes Grid */
+
 .results {
   margin-bottom: 2rem;
 }
@@ -277,9 +291,9 @@ body {
   color: #777;
 }
 
-/* ================================
-   Modal
-================================ */
+
+   /* Modal */
+
 .modal {
   position: fixed;
   inset: 0;
@@ -339,9 +353,9 @@ body {
   margin-top: 0.5rem;
 }
 
-/* ================================
-   Footer
-================================ */
+
+   /* Footer */
+
 .site-footer {
   margin-top: auto;
   background: linear-gradient(135deg, #00f2fe, #4facfe);
@@ -353,9 +367,9 @@ body {
   font-size: 0.9rem;
 }
 
-/* ================================
-   Utilities
-================================ */
+
+   /* Utilities */
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -369,19 +383,13 @@ body {
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
 }
 
-/* ================================
-   Responsive Tweaks
-================================ */
+
+   /* Responsive Tweaks */
+
 @media (max-width: 768px) {
   .filters {
     flex-direction: column;
@@ -392,45 +400,4 @@ body {
   .card-image {
     height: 150px;
   }
-}
-
-/* About Page */
-.about {
-  margin: 2rem auto;
-  max-width: 800px;
-  padding: 1rem;
-  text-align: left;
-}
-
-.about h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  color: #4facfe;
-  /* background: linear-gradient(135deg, #00f2fe, #4facfe); */
-}
-
-.about h2 {
-  margin-top: 2rem;
-  font-size: 1.5rem;
-  color: #4facfe;
-}
-
-.about p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-.features-list {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0;
-}
-
-.features-list li {
- background: linear-gradient(135deg, #00f2fe, #4facfe);
-  margin: 0.5rem 0;
-  padding: 0.7rem 1rem;
-  border-left: 5px solid #ff6f61;
-  border-radius: 6px;
 }
