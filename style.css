@@ -1,5 +1,4 @@
-
-   /* Global Styles */
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -12,8 +11,8 @@ html {
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #222;
+  font-family: "Segoe UI", sans-serif;
+  color: #000;
   line-height: 1.6;
   background: linear-gradient(135deg, #f9f9f9, #f0f4ff);
   min-height: 100vh;
@@ -30,12 +29,12 @@ body {
 
 /* Navbar */
 .navbar {
-  /* background: linear-gradient(135deg, #4facfe, #00f2fe); */
-  color: #000;
+  color: #fff;
   padding: 0.6rem 1rem;
   position: relative;
-  bottom: 10px;
   z-index: 1000;
+  /* background: linear-gradient(135deg, #4facfe, #00f2fe); */
+  border-radius: 10px;
 }
 
 .nav-container {
@@ -47,8 +46,11 @@ body {
 }
 
 .brand {
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-size: 2rem;
+  font-weight:600;
+  position: relative;
+  bottom: 20px;
+  color: #000;
 }
 
 .nav-links {
@@ -62,6 +64,8 @@ body {
   font-weight: 500;
   text-decoration: none;
   font-size: 1rem;
+  position: relative;
+  bottom: 20px;
   transition: opacity 0.2s;
 }
 
@@ -75,10 +79,9 @@ body {
   font-size: 1.5rem;
   background: none;
   border: none;
-  color: white;
+  color: #fff;
   cursor: pointer;
 }
-
 
 /* About Page */
 .about {
@@ -93,7 +96,6 @@ body {
   margin-bottom: 1rem;
   text-align: center;
   color: #4facfe;
-  /* background: linear-gradient(135deg, #00f2fe, #4facfe); */
 }
 
 .about h2 {
@@ -114,22 +116,20 @@ body {
 }
 
 .features-list li {
- background: linear-gradient(135deg, #00f2fe, #4facfe);
+  background: linear-gradient(135deg, #00f2fe, #4facfe);
   margin: 0.5rem 0;
   padding: 0.7rem 1rem;
   border-left: 5px solid #ff6f61;
   border-radius: 6px;
 }
 
-
-   /* Header */
-
+/* Header */
 .site-header {
   background: linear-gradient(135deg, #4facfe, #00f2fe);
   color: #fff;
   text-align: center;
-  max-height:100px;
   padding: 2rem 1rem;
+  height: 90px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -146,8 +146,7 @@ body {
   opacity: 0.9;
 }
 
-
-   /* Controls Section */
+/* Controls Section */
 .controls {
   margin: 2rem auto;
   background: #fff;
@@ -179,10 +178,11 @@ body {
 
 .search-form button {
   padding: 0.7rem 1rem;
-  border: none;
+  border: 1px solid black;
   border-radius: 8px;
   background: linear-gradient(135deg, #43e97b, #38f9d7);
-  color: #fff;
+  color: #000;
+  font-weight: 500;
   cursor: pointer;
   transition: transform 0.2s, opacity 0.2s;
 }
@@ -220,9 +220,7 @@ body {
   border: 1px solid #ddd;
 }
 
-
-   /* Results / Recipes Grid */
-
+/* Results / Recipes Grid */
 .results {
   margin-bottom: 2rem;
 }
@@ -291,9 +289,7 @@ body {
   color: #777;
 }
 
-
-   /* Modal */
-
+/* Modal */
 .modal {
   position: fixed;
   inset: 0;
@@ -353,9 +349,7 @@ body {
   margin-top: 0.5rem;
 }
 
-
-   /* Footer */
-
+/* Footer */
 .site-footer {
   margin-top: auto;
   background: linear-gradient(135deg, #00f2fe, #4facfe);
@@ -367,9 +361,7 @@ body {
   font-size: 0.9rem;
 }
 
-
-   /* Utilities */
-
+/* Utilities */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -387,8 +379,15 @@ body {
   to   { opacity: 1; transform: scale(1); }
 }
 
-
-   /* Responsive Tweaks */
+/* Responsive Tweaks */
+@media (max-width: 1024px) {
+  .recipe-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+  .card-image {
+    height: 160px;
+  }
+}
 
 @media (max-width: 768px) {
   .filters {
@@ -396,8 +395,54 @@ body {
     align-items: flex-start;
     gap: 1rem;
   }
-
   .card-image {
     height: 150px;
+  }
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    background: #4facfe;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+  .site-title {
+    font-size: 1.8rem;
+  }
+  .site-subtitle {
+    font-size: 0.9rem;
+  }
+  .card-title {
+    font-size: 1rem;
+  }
+  .card-desc {
+    font-size: 0.85rem;
+  }
+  .controls {
+    padding: 1rem;
+  }
+  .search-form input[type="search"] {
+    padding: 0.5rem 0.7rem;
+  }
+  .search-form button {
+    padding: 0.5rem 0.7rem;
   }
 }
